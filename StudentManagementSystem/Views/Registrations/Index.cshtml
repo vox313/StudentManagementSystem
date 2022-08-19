@@ -1,0 +1,63 @@
+﻿@model IEnumerable<StudentManagementSystem.Models.Registration>
+
+@{
+    ViewBag.Title = "Registration Details";
+}
+
+<h2>Registration Details</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FistName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile_No_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Batch.Batch1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.Course1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FistName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile_No_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Batch.Batch1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course.Course1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

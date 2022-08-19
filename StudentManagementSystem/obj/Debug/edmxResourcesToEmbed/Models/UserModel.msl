@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StudentMgmtSysModelStoreContainer" CdmEntityContainer="StudentMgmtSysEntities">
+    <EntitySetMapping Name="Batches">
+      <EntityTypeMapping TypeName="StudentMgmtSysModel.Batch">
+        <MappingFragment StoreEntitySet="Batch">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Batch1" ColumnName="Batch" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="StudentMgmtSysModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Course1" ColumnName="Course" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registrations">
+      <EntityTypeMapping TypeName="StudentMgmtSysModel.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FistName" ColumnName="FistName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="nic" ColumnName="nic" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="Mobile_No_" ColumnName="Mobile_No." />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="StudentMgmtSysModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
